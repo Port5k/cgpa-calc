@@ -1,1 +1,17 @@
-/* CSS */
+:root {
+    /* COLOR */
+    --primary_color: #5D34AF;
+    --primary_light_color: #9061E2;
+    --primary_dark_color: #27057F;
+    --text_color: #FFFFFF;
+
+    /* FONTS */
+    --font_primary: "Montserrat", sans-serif;
+}
+
+.dark_mode {
+    --secondary_color: #B388FF;
+    --secondary_light_color: #E7B9FF;
+    --secondary_dark_color: #805ACB;
+    --text_color: #FFFFFF;
+}
