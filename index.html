@@ -7,53 +7,115 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CGPA Calculator</title>
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&family=Montserrat:wght@100;500;600;700&display=swap"
+            rel="stylesheet">
+        <script src="https://kit.fontawesome.com/fb477d7a7c.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
+        <!-- OVERLAY DIV -->
+
+        <div class="overlay_div"></div>
+
+        <!-- ANIMATION-->
+
+        <div class="animation"></div>
+
         <!-- HEADER -->
+
         <header class="header">
-            <div class="title_wrapper">
-                <div class="icon title_icon"></div>
-                <div class="title">
-                    <p class="main_title">CGPA Calculator</p>
-                    <p class="pitch">...eradicating result anxiety</p>
+            <div class="header_utility">
+                <div class="header_utility_modal_trigger">Schematics</div>
+                <div class="toggler_wrapper">
+                    <div class="toggler"></div>
                 </div>
             </div>
-            <div class="theme_toggler">
-                <div class="icon theme_toggler_icon"></div>
+            <div class="title_wrapper">
+                <div class="title">
+                    <h1>
+                        <div class="icon title_icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>CGPA Calculator
+                    </h1>
+                    <p>...results only!</p>
+                </div>
             </div>
         </header>
 
         <!-- MAIN -->
 
         <main class="main">
-            <div class="modal about_modal">About</div>
-            <section class="personal_info_section"></section>
+            <section class="user_info_section">
+                <div class="user_info">
+                    <div class="username_wrapper">Name: &nbsp;<span class="username"></span></div>
+                    <div class="department_wrapper">Department: &nbsp; <span class="current_department"></span></div>
+                    <div class="current_year_wrapper">Year: &nbsp; <span class="current_year"></span></div>
+                </div>
+            </section>
             <section class="input_section">
                 <form class="input_form">
+                    <p class="add_course_label">Click the "Add Course" button to add courses.</p>
                     <div class="form_item">
-                        <label for="userName"></label>
-                        <input type="text" name="userName" id="userName">
-                        <button value="Next">Next</button>
+                        <label for="courseCodeInput">Course Code</label>
+                        <input type="text" class="course_code_input" placeholder="ANA 101" required>
+                    </div>
+                    <div class="form_item">
+                        <label for="numberOfUnitInput">Number of Units</label>
+                        <input type="number" class="number_of_unit_input" placeholder="5" required>
+                    </div>
+                    <div class="form_item">
+                        <label for="scoreInput">Score</label>
+                        <input type="number" class="score_input" min="0" max="100" placeholder="77" required>
+                    </div>
+                    <div class="input_form_button_wrapper">
+                        <button class="add_course" value="addCourse">Add Course</button>
                     </div>
                 </form>
             </section>
-            <section class="output_section"></section>
+            <section class="output_section">
+                <div class="table_pending_container">
+                    <table class="table_pending">
+                        <caption>CGPA REPORT</caption>
+                        <thead>
+                            <th>COURSE CODE</th>
+                            <th>NO. OF UNITS</th>
+                            <th>SCORE</th>
+                        </thead>
+                    </table>
+                    <div class="table_utility_wrapper">
+                        <button class="table_reset_button" value="clearTable" disabled="disabled">Clear Table</button>
+                        <button class="cgpa_calculate_button" value="calculateCGPA" disabled="disabled">Calculate
+                            CGPA!</button>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <!-- FOOTER -->
 
         <footer class="footer">
             <div class="credits">
-                <p>A GDG Ogbomoso Group Project</p>
                 <p>
                     Made with &#128151; by Group 2's
-                    <a href="https://twitter.com/Port5k" class="twitter_handles">Port5k</a>
-                    <a href="#" class="twitter_handles">Person 2</a>
-                    <a href="#" class="twitter_handles">Person 3</a>
+                    <a href="https://twitter.com/Port5k" class="twitter_handles">Port5k</a> and
+                    <a href="https://twitter.com/c0denoob" class="twitter_handles">c0denoob</a>,
+                    <a href="https://twitter.com/c0denoob" class="twitter_handles">Person 3</a>
                 </p>
+                <p>GDG Ogbomoso</p>
+                <p>&copy;2022 Port5k</p>
             </div>
         </footer>
+        <div class="xar_modal">
+            <div class="result_modal_wrapper">
+                <div class="result_modal">
+                    <p>5.0</p>
+                    <button class="result_modal_button" value="OK">OK</button>
+                </div>
+            </div>
+        </div>
 
         <!-- scripts -->
 
